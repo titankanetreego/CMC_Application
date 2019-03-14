@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="baudrates">
+        <item>110</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>14400</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>56000</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>128000</item>
+        <item>256000</item>
+    </string-array>
+
+
+    <string-array name="channels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="pulses">
+        <item>0：設備默認</item>
+        <item>1：快 20ms</item>
+        <item>2：中 40ms</item>
+        <item>3：慢 60ms</item>
+    </string-array>
+
+    <string-array name="search_item">
+        <item>全部</item>
+        <item>已完成</item>
+        <item>未完成</item>
+        <item>建單日</item>
+        <item>處理人</item>
+    </string-array>
+
+
+</resources>
