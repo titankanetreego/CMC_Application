@@ -1,7 +1,9 @@
 package com.example.cmc_application;
 
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Handler;
+import android.os.PowerManager;
 import android.support.annotation.RequiresApi;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,11 +45,14 @@ public class MainActivity extends BaseActivity implements MainPresenter.View{
     private LinearLayout enView;
     private int index = 0;
     private int doorIndex = 0;
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         presenter = new MainPresenter(mParent(), this);
         settingsData = presenter.getSettingData();
+        mediaPlayer = MediaPlayer.create(mParent().getApplicationContext(), R.raw.do_big_things);
+        mediaPlayer.start();
         createAndShowGUI();
     }
 
