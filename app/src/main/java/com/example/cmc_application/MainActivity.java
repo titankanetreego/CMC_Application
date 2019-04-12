@@ -102,18 +102,19 @@ public class MainActivity extends BaseActivity implements MainPresenter.View{
             }
         });
 
-        final Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                index = index + 10;
-                presenter.updateStatus(index);
-                if (index % 9 == 0)
-                    index = 0;
-                handler.postDelayed(this,2000);
-            }
-        };
-        handler.postDelayed(runnable, 0);
+        //輪流播放圖片
+//        final Handler handler = new Handler();
+//        Runnable runnable = new Runnable() {
+//            @Override
+//            public void run() {
+//                index = index + 10;
+//                presenter.updateStatus(index);
+//                if (index % 9 == 0)
+//                    index = 0;
+//                handler.postDelayed(this,2000);
+//            }
+//        };
+//        handler.postDelayed(runnable, 0);
 
         mReadOpen();
         mSendOpen();
@@ -170,27 +171,39 @@ public class MainActivity extends BaseActivity implements MainPresenter.View{
                 switch (value){
                     case "0":
                         status_tv.setText(getResString(R.string.status_0));
+                        presenter.updateStatus(40);
                         break;
                     case "1":
                         status_tv.setText(getResString(R.string.status_1));
+                        presenter.updateStatus(40);
                         break;
                     case "2":
                         status_tv.setText(getResString(R.string.status_2));
+                        presenter.updateStatus(20);
                         break;
                     case "3":
                         status_tv.setText(getResString(R.string.status_3));
+                        presenter.updateStatus(20);
                         break;
                     case "4":
                         status_tv.setText(getResString(R.string.status_4));
+                        presenter.updateStatus(20);
                         break;
                     case "5":
                         status_tv.setText(getResString(R.string.status_5));
+                        presenter.updateStatus(60);
                         break;
                     case "6":
                         status_tv.setText(getResString(R.string.status_6));
+                        presenter.updateStatus(70);
                         break;
                     case "7":
+                        status_tv.setText(getResString(R.string.status_7));
+                        presenter.updateStatus(80);
+                        break;
+                    case "8":
                         status_tv.setText(getResString(R.string.status_8));
+                        presenter.updateStatus(90);
                         break;
                     case "9":
                         status_tv.setText(getResString(R.string.status_10));
@@ -244,6 +257,9 @@ public class MainActivity extends BaseActivity implements MainPresenter.View{
                 break;
             case S.MOD_CODE_H:
                 modCodeH_tv.setText(value);
+                break;
+            case S.QR_CODE:
+                presenter.updateStatus(10);
                 break;
         }
     }

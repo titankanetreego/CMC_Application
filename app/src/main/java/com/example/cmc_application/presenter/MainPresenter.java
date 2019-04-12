@@ -72,6 +72,8 @@ public class MainPresenter {
                 view.updateValue(S.SOC, soc);
                 String status = String.valueOf(ByteUtil.hexStr2decimal(value_1.substring(28, 32)));
                 view.updateValue(S.STATUS, status);
+                if (kiosk.equals("1") && status.equals("2"))
+                    view.updateValue(S.QR_CODE, "");
                 break;
             case 50:
                 String value_2 = command.substring(6, 46);

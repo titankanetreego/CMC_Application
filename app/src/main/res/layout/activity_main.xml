@@ -11,7 +11,7 @@
         android:id="@+id/background_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/ic_u2_hmi_1"
+        android:background="@mipmap/ic_u2_hmi_4"
         android:visibility="visible">
 
         <ImageView

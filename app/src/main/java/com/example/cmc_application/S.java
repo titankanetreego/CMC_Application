@@ -26,4 +26,5 @@ public class S {
     public static final String MOD_ERRCODE = "module_error_code";
     public static final String MOD_CODE_L = "module_code_l";
     public static final String MOD_CODE_H = "module_code_h";
+    public static final String QR_CODE = "qr_code";
 }
